@@ -8,6 +8,7 @@ Bu proje, bir akıllı telefon üretim hattındaki süreçleri (SMT, Montaj, Pak
 Üretim sahasından gelen verileri manuel takipten kurtarıp, dijital bir ekosisteme taşımak amaçlanmıştır. Bu sistem sayesinde:
 * **Anlık İzlenebilirlik:** Üretimdeki darboğazlar canlı grafiklerle izlenir.
 * **Veri Güvenliği:** Veriler ilişkisel bir SQL (SQLite) yapısında depolanır.
+* **Veri Analitiği & Raporlama:** **`merkez_rapor.py`** üzerinden tüm üretim geçmişi dışa aktarılabilir (CSV/Excel). Bu verilerle Verimlilik (OEE) ve Kalite analizleri yapılabilir.
 * **Entegrasyon:** Genel merkez gibi dış birimler için API Key tabanlı güvenli raporlama sunulur.
 
 ---
@@ -69,7 +70,7 @@ Proje klasöründeki dosyaların görevleri aşağıda detaylandırılmıştır:
 
 * **`app.py`**: Projenin ana kontrol merkezidir. Flask sunucusunu ayağa kaldırır, SQLite veritabanı bağlantısını kurar ve API uç noktalarını (Endpoints) yönetir.
 * **`simulasyon.py`**: Üretim hattından anlık veri akışı geliyormuş gibi sisteme rastgele 500 adet ürün kaydı gönderen test scriptidir.
-* **`merkez_rapor.py`**: API üzerinden fabrikanın güncel verilerini çeker ve analiz için zaman damgalı bir **Excel (CSV)** raporu oluşturur.
+* **`merkez_rapor.py`**:  **Projenin analitik bacağıdır.** API üzerinden fabrikanın güncel verilerini çeker ve yönetimsel analizler için zaman damgalı bir **Excel (CSV)** raporu üretir.
 * **`templates/dashboard.html`**: Kullanıcıların canlı veriyi pasta grafiği (Pie Chart) üzerinden izlediği, Bootstrap destekli görsel arayüz dosyasıdır.
 * **`requirements.txt`**: Projenin herhangi bir bilgisayarda sorunsuz çalışması için gerekli kütüphane listesini içerir.
 
