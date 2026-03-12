@@ -75,19 +75,12 @@ Proje klasöründeki dosyaların görevleri aşağıda detaylandırılmıştır:
 
 ---
 
-## 🛠️ Gelecek Geliştirmeler (Roadmap)
-Projenin bir sonraki aşamalarında eklenmesi planlanan özellikler:
-- [ ] Kullanıcı Giriş Paneli (Admin & Operatör Yetkilendirme)
-- [ ] Üretim Hattı Hata Logları ve Kalite Analizleri
-- [ ] Power BI üzerinden derinlemesine veri analitiği entegrasyonu
-
----
 
 ## 📧 İletişim ve Geliştirici
 Bu proje, veri odaklı üretim sistemleri ve otomasyon üzerine bir çalışma olarak **Nilay Özel** tarafından geliştirilmiştir.
 
-* **LinkedIn:** [linkedin.com/in/nilayozel](https://www.linkedin.com/in/nilayozel/)
-* **GitHub:** [@NilayOzel](https://github.com/NilayOzel)
+* **LinkedIn:** [linkedin.com/in/nilayozel](https://www.linkedin.com/in/nilay-özel-2927a7210/)
+* **GitHub:** [@NilayOzel](https://github.com/nilayozel)
 
 ---
 *Bu proje açık kaynaklıdır ve geliştirilmeye açıktır. Katkıda bulunmak isterseniz bir Pull Request gönderebilirsiniz.*
