@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OPPO MES Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Grafik kutusunun boyutunu sabitleyelim ki çok yayılmasın */
+        .chart-container {
+            position: relative;
+            height: 200px; /* Yüksekliği kontrol eder */
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">🏭 OPPO Üretim Dashboard</h2>
+        
+        <div class="row text-center mb-4">
+            <div class="col-md-4"><div class="card p-3 shadow text"><h5>Toplam Ürün</h5><h3>{{ toplam }}</h3></div></div>
+            <div class="col-md-2"><div class="card p-3 shadow text-success"><h5>Hazır Ürün</h5><h3>{{ tamamlanan }}</h3></div></div>
+            <div class="col-md-2"><div class="card p-3 shadow text-warning"><h5>Paket</h5><h3>{{ paketleme }}</h3></div></div>
+            <div class="col-md-2"><div class="card p-3 shadow text-info"><h5>Montaj</h5><h3>{{ montajda }}</h3></div></div>
+            <div class="col-md-2"><div class="card p-3 shadow text-danger"><h5>SMT</h5><h3>{{ smt }}</h3></div></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 bg-white p-4 shadow rounded" style="max-height: 450px;">
+                <div style="position: relative; height:350px; width:100%;">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    // Tuval (Canvas) alanını seçiyoruz
+    const ctx = document.getElementById('myChart').getContext('2d');
+    
+    // Yeni bir pasta grafik oluşturuyoruz
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            // Grafiğin altındaki etiketler
+            labels: ['Hazır Ürün', 'Paket', 'Montaj', 'SMT'],
+            datasets: [{
+                // Flask'tan (app.py) gelen sayısal verileri buraya yerleştiriyoruz
+                data: [
+                    Number("{{ tamamlanan }}"), 
+                    Number("{{ paketleme }}"), 
+                    Number("{{ montajda }}"), 
+                    Number("{{ smt }}")
+                ],
+                // Her bir dilim için kurumsal renk tanımlamaları
+                backgroundColor: ['#28a745', '#ffc107', '#17a2b8', '#dc3545'], 
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false, // Grafiğin belirlenen kutu boyutuna sığmasını sağlar
+            plugins: {
+                legend: {
+                    position: 'right', // ETİKETLERİ SAĞA ALAN KRİTİK AYAR
+                    align: 'center',
+                    labels: {
+                        padding: 20,
+                        font: { size: 14 }
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
