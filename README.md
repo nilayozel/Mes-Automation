@@ -2,7 +2,7 @@
 
 Bu proje, bir akıllı telefon üretim hattındaki süreçleri (SMT, Montaj, Paketleme) uçtan uca takip eden, verileri SQL veritabanında saklayan ve anlık olarak görselleştiren bir **Üretim Yürütme Sistemi (MES)** prototipidir.
 
-![OPPO MES Dashboard](https://github.com/NilayOzel/Mes-Automation/raw/main/dashboard_screenshot.png) 
+![OPPO MES Dashboard](https://github.com/nilayozel/Mes-Automation/blob/main/dashboard.png) 
 *(Not: Kendi ekran görüntünüzü yüklerseniz burası çok daha etkileyici duracaktır)*
 
 ## 🎯 Projenin Amacı
