@@ -45,6 +45,9 @@ Bu komut veritabanını otomatik olarak oluşturacak ve fabrikayı "çalışır"
 ```bash
 python app.py
 ```
+
+![OPPO MES Dashboard](https://github.com/nilayozel/Mes-Automation/blob/main/dashboard.png) 
+
 Terminalde Running on http://127.0.0.1:5000 mesajını gördüğünüzde her şey hazır demektir.
 
 ### 4. Veri Simülasyonunu Çalıştırın
@@ -53,6 +56,14 @@ Dashboard'un dolması ve sistemin yük altındaki performansını görmek için 
 ```bash
 python simulasyon.py
 ```
+
+### 5. Analitik Rapor Oluşturma
+Üretim verilerini analiz etmek ve üst yönetime sunmak üzere Excel/CSV formatında rapor almak için aşağıdaki komutu kullanın:
+
+```bash
+python merkez_rapor.py
+```
+Bu komut çalıştıktan sonra proje klasöründe tarih ve saat damgalı bir .csv dosyası oluşturulacaktır. Bu dosya Power BI veya Excel analizleri için hazır haldedir.
 
 ---
 
