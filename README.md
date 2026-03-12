@@ -1,4 +1,4 @@
-# 🏭 OPPO MES - Üretim Hattı Canlı Dashboard Sistemi
+# 🏭 OPPO MES: End-to-End Production Tracking & Analytical Reporting System
 
 Bu proje, bir akıllı telefon üretim hattındaki süreçleri (SMT, Montaj, Paketleme) uçtan uca takip eden, verileri SQL veritabanında saklayan ve anlık olarak görselleştiren bir **Üretim Yürütme Sistemi (MES)** prototipidir.
 
